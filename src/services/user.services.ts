@@ -11,6 +11,7 @@ const datas: any = [
   "email",
   "updatedat",
   "createdat",
+  "phone",
 ]
 
 const getOne = async (target: any) => {
@@ -22,8 +23,34 @@ const getOne = async (target: any) => {
   })
 }
 
+const getByuser = async (target: any) => {
+  return await Users.findOne({
+    select: datas,
+    where: {
+      username: target,
+    },
+  })
+}
+
+const getByEmail = async (target: any) => {
+  return await Users.findOne({
+    select: datas,
+    where: {
+      email: target,
+    },
+  })
+}
+
+const getByPhone = async (target: any) => {
+  return await Users.findOne({
+    select: datas,
+    where: {
+      phone: target,
+    },
+  })
+}
 const postUser = async (datas: any) => {
   await Users.save(datas)
 }
 
-export { getAll, getOne, postUser }
+export { getAll, getOne, postUser, getByuser, getByEmail, getByPhone }

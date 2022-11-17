@@ -23,6 +23,9 @@ export class Users extends BaseEntity {
 
   @Column()
   email: String
+
+  @Column()
+  phone: String
   @Column()
   createdat: Date
 
