@@ -4,8 +4,9 @@ import {
   Column,
   PrimaryColumn,
   PrimaryGeneratedColumn,
+  ManyToOne,
 } from "typeorm"
-
+import { Events } from "./event.entity"
 @Entity()
 export class Users extends BaseEntity {
   @PrimaryGeneratedColumn()
@@ -22,5 +23,9 @@ export class Users extends BaseEntity {
   @Column()
   createdat: Date
 
+  @Column()
   updatedat: Date
+
+  @ManyToOne(() => Events, (Event) => Event.owner)
+  owner: Events[]
 }

@@ -34,3 +34,4 @@ export class Events extends BaseEntity {
   @ManyToOne(() => Users, (User) => User.id)
   owner: Users
 }
+
