@@ -16,6 +16,9 @@ export class Users extends BaseEntity {
   username: String
 
   @Column()
+  password: String
+
+  @Column()
   fullname: String
 
   @Column()
