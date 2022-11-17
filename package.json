@@ -1,5 +1,5 @@
 {
-  "name": "oculus_backend",
+  "name": "attendance_management",
   "version": "1.0.0",
   "description": "The backend of oculus auction platform",
   "main": "src/app.ts",
