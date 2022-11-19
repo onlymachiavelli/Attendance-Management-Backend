@@ -9,6 +9,8 @@ const app = express()
 
 app.use(json())
 app.use(cors())
+import userRouter from "./routes/user.routes"
+
 const PORT: any = process.env.PORT || 3000
 
 app
@@ -19,7 +21,7 @@ app
       .initialize()
       .then((res: any) => {
         console.log("Connected to the database ! ")
-
+        app.use("/me", userRouter)
         //app use
       })
       .catch((e: any) => {
