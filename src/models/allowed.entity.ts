@@ -4,5 +4,5 @@ import { Events } from "./event.entity"
 
 import { Users } from "./user.entity"
 
-@Entity()
-export class Presences extends BaseEntity {}
+//@Entity()
+//export class Presences extends BaseEntity {}

@@ -9,7 +9,7 @@ const PostUser: RequestHandler = async (req, res) => {
 
   if (req.body) {
     //looking for the user
-    const target: any = userServ.getByuser(req.body.username)
+    const target: any = await userServ.getByuser(req.body.username)
 
     if (target) {
       res.status(409).send("user name is already exist ! ")
