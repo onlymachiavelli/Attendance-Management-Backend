@@ -8,7 +8,12 @@ const getAll = async () =>{
 
 const getOne = async (id:any) =>{
 
-    return await Pteachers.findOne(id)
+    return await Pteachers.findOne({
+        where: {
+            code: id
+        }
+        
+    })
 
 }
 
@@ -37,5 +42,5 @@ export {
     create,
     update,
     remove
-    
+
 } 

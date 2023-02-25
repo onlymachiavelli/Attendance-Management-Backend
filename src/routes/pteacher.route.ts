@@ -5,7 +5,7 @@ import GetOne from '../controllers/pteachers.getone'
 
 const PteacherRoute = express.Router()
 PteacherRoute.get("/", GetAll)
-PteacherRoute.get("/:id", GetOne)
+PteacherRoute.get("/f", GetOne)
 PteacherRoute.post("/", Save)
 
 
